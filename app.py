@@ -40,7 +40,10 @@ uploaded_file=st.file_uploader("Upload Your Resume",type="pdf",help="Please uplo
 submit = st.button("Submit")
 
 if submit:
-    if uploaded_file is not None:
+    if jd and uploaded_file is not None:
         text=input_pdf_text(uploaded_file)
         response=get_gemini_response(input_prompt)
         st.subheader(response)
+
+     
+        
